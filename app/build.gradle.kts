@@ -1,8 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
     id("org.jetbrains.kotlin.kapt")
+    alias(libs.plugins.kotlin.compose)
+    id ("dagger.hilt.android.plugin")
 }
 
 android {
@@ -54,7 +55,9 @@ dependencies {
     implementation(libs.hilt.android)
     implementation(libs.coroutines)
     implementation(libs.glide)
+    implementation(libs.hilt.navigation.compose)
     implementation(libs.retrofit)
+    implementation(libs.lottie)
     implementation(libs.retrofitConverterGson)
     kapt(libs.hilt.compiler)
     androidTestImplementation(libs.androidx.junit)
